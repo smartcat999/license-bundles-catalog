@@ -1,0 +1,103 @@
+{
+  "generated_at": "2026-04-13T09:21:39.474320+00:00",
+  "items": [
+    {
+      "name": "dmp",
+      "extensions": [
+        "dmp"
+      ],
+      "icon": null,
+      "created_at": "2025-11-28T02:33:15.325Z"
+    },
+    {
+      "name": "edgewize",
+      "extensions": [
+        "edgewize"
+      ],
+      "icon": null,
+      "display_name": {
+        "en": "EdgeWize",
+        "zh": "Edgewize"
+      },
+      "created_at": "2025-11-28T02:38:58.524Z"
+    },
+    {
+      "name": "ks-core",
+      "extensions": [
+        "ks-core",
+        "devops",
+        "gatekeeper",
+        "gateway",
+        "kubefed",
+        "metrics-server",
+        "network",
+        "openpitrix",
+        "opensearch",
+        "storage-utils",
+        "servicemesh",
+        "tower",
+        "vector",
+        "whizard-alerting",
+        "whizard-auditing",
+        "whizard-events",
+        "whizard-logging",
+        "whizard-notification",
+        "whizard-telemetry",
+        "whizard-telemetry-ruler",
+        "cert-manager",
+        "ingress-utils",
+        "nvidia-gpu-operator",
+        "oauth2-proxy"
+      ],
+      "icon": null,
+      "display_name": {
+        "zh": "KubeSphere企业版"
+      },
+      "created_at": "2025-11-28T02:29:36.215Z"
+    },
+    {
+      "name": "ks-dmp",
+      "extensions": [
+        "ks-dmp"
+      ],
+      "icon": null,
+      "created_at": "2025-11-28T02:39:14.497Z"
+    },
+    {
+      "name": "kubeedge",
+      "extensions": [
+        "kubeedge"
+      ],
+      "icon": null,
+      "created_at": "2025-11-28T02:34:29.149Z"
+    },
+    {
+      "name": "springcloud",
+      "extensions": [
+        "springcloud"
+      ],
+      "icon": null,
+      "created_at": "2025-11-28T02:34:05.706Z"
+    },
+    {
+      "name": "whizard-monitoring",
+      "extensions": [
+        "whizard-monitoring",
+        "loki",
+        "wiztelemetry-pro-v1",
+        "grafana"
+      ],
+      "icon": null,
+      "display_name": {
+        "en": "KSE Whizard Telemetry",
+        "zh": "WizTelemetry 可观测平台"
+      },
+      "created_at": "2025-11-28T02:32:54.355Z"
+    }
+  ],
+  "paginator": {
+    "total_count": 7,
+    "page": 1,
+    "per_page": 7
+  }
+}

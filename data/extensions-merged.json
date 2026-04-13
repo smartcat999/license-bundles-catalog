@@ -1,0 +1,2946 @@
+{
+  "generated_at": "2026-04-13T09:21:39.700462+00:00",
+  "total": 67,
+  "items": [
+    {
+      "id": "0",
+      "chineseName": "KubeSphere核心",
+      "englishName": "ks-core",
+      "resource_limit": [
+        {
+          "name": "vcpu",
+          "display_name": "VCPU",
+          "scope": "global"
+        },
+        {
+          "name": "count/clusters.cluster.kubesphere.io",
+          "display_name": "集群数量",
+          "scope": "global"
+        },
+        {
+          "name": "count/users.iam.kubesphere.io",
+          "display_name": "用户数量",
+          "scope": "global"
+        },
+        {
+          "name": "count/workspacetemplates.tenant.kubesphere.io",
+          "display_name": "企业空间模板数量",
+          "scope": "global"
+        },
+        {
+          "name": "count/workloadtemplates.workloadtemplate.kubesphere.io",
+          "display_name": "工作负载模板数量",
+          "scope": "cluster"
+        },
+        {
+          "name": "count/repos.application.kubesphere.io",
+          "display_name": "应用仓库数量",
+          "scope": "workspace"
+        }
+      ],
+      "feature_gates": [
+        {
+          "name": "multiClusterManager",
+          "display_name": "多集群管理",
+          "scope": "global"
+        },
+        {
+          "name": "clusterLabelManager",
+          "display_name": "集群标签管理",
+          "scope": "global"
+        },
+        {
+          "name": "customPlatformSettings",
+          "display_name": "自定义平台设置",
+          "scope": "global"
+        },
+        {
+          "name": "customRoles",
+          "display_name": "自定义角色",
+          "scope": "global"
+        },
+        {
+          "name": "customRoles",
+          "display_name": "自定义角色",
+          "scope": "workspace"
+        },
+        {
+          "name": "customRoles",
+          "display_name": "自定义角色",
+          "scope": "namespace"
+        },
+        {
+          "name": "customMonitoring",
+          "display_name": "自定义监控",
+          "scope": "cluster"
+        },
+        {
+          "name": "customApps",
+          "display_name": "自定义应用",
+          "scope": "workspace"
+        },
+        {
+          "name": "customWorkspaceQuota",
+          "display_name": "自定义企业空间配额",
+          "scope": "workspace"
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "chineseName": "KEDA for KubeSphere",
+      "englishName": "ks-autoscaling",
+      "resource_limit": [
+        {
+          "name": "count/scaledobjects.keda.sh",
+          "display_name": "ScaledObject 数量",
+          "scope": "cluster"
+        },
+        {
+          "name": "count/scaledobjects.keda.sh",
+          "display_name": "ScaledObject 数量",
+          "scope": "namespace"
+        }
+      ],
+      "version": "1.1.0",
+      "kube_version": ">=1.23.0-0",
+      "ks_version": ">=4.2.0-0",
+      "home": "https://kubesphere.io",
+      "description": {
+        "zh": "KEDA 是一个基于 Kubernetes 事件驱动自动扩缩的组件，能够为 Kubernetes 中运行的任何容器提供事件驱动的扩缩功能。",
+        "en": "KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes"
+      },
+      "display_name": {
+        "zh": "KEDA for KubeSphere",
+        "en": "KEDA for KubeSphere"
+      },
+      "category": "computing",
+      "keywords": [
+        "computing",
+        "autoscaling",
+        "keda"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "2",
+      "chineseName": "KubeSphere 网络",
+      "englishName": "network",
+      "resource_limit": [
+        {
+          "name": "count/networkpolicies.networking.k8s.io",
+          "display_name": "网络策略数量",
+          "scope": "cluster"
+        },
+        {
+          "name": "count/ippools.crd.projectcalico.org",
+          "display_name": "IP 池数量",
+          "scope": "cluster"
+        },
+        {
+          "name": "count/namespacenetworkpolicies.network.kubesphere.io",
+          "display_name": "命名空间网络策略数量",
+          "scope": "workspace"
+        }
+      ],
+      "feature_gates": [
+        {
+          "name": "networkpolicies",
+          "display_name": "网络策略",
+          "scope": "cluster"
+        },
+        {
+          "name": "ippools",
+          "display_name": "IP 池",
+          "scope": "cluster"
+        },
+        {
+          "name": "nsNetworkpolicies",
+          "display_name": "命名空间网络策略",
+          "scope": "workspace"
+        },
+        {
+          "name": "nsNetIsolation",
+          "display_name": "命名空间网络隔离",
+          "scope": "workspace"
+        },
+        {
+          "name": "wsNetIsolation",
+          "display_name": "企业空间网络隔离",
+          "scope": "workspace"
+        }
+      ],
+      "version": "1.3.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.2.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "提供 Kubernetes 集群的 Pod IP 池管理能力（基于 Calico）；支持租户视角的 IP 池、NetworkPolicy 管理及配置变更",
+        "en": "Provides Pod IP pool management capabilities for Kubernetes clusters (based on Calico); Supports tenant-level IPPool、NetworkPolicy management, and configuration changes."
+      },
+      "display_name": {
+        "zh": "KubeSphere 网络",
+        "en": "KubeSphere Network"
+      },
+      "category": "networking",
+      "keywords": [
+        "networking",
+        "ippool",
+        "networkpolicy"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "3",
+      "chineseName": "Gatekeeper",
+      "englishName": "gatekeeper",
+      "version": "1.0.3",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.1.2-0",
+      "home": "https://kubesphere.io",
+      "docs": "https://open-policy-agent.github.io/gatekeeper/website/docs/",
+      "description": {
+        "zh": "Gatekeeper 是一个基于 OPA 的安全策略管理工具",
+        "en": "Gatekeeper is a security policy management tool based on OPA"
+      },
+      "display_name": {
+        "zh": "Gatekeeper",
+        "en": "Gatekeeper"
+      },
+      "category": "security",
+      "keywords": [
+        "security",
+        "gatekeeper",
+        "opa",
+        "admission webhook"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "4",
+      "chineseName": "DevOps",
+      "englishName": "devops",
+      "resource_limit": [
+        {
+          "name": "count/devopsprojects.devops.kubesphere.io",
+          "display_name": "DevOps 项目数量",
+          "scope": "workspace"
+        },
+        {
+          "name": "count/pipelines.devops.kubesphere.io",
+          "display_name": "流水线数量",
+          "scope": "namespace"
+        },
+        {
+          "name": "count/applications.gitops.kubesphere.io",
+          "display_name": "GitOps 应用数量",
+          "scope": "namespace"
+        }
+      ],
+      "feature_gates": [
+        {
+          "name": "devopsResourceManagement",
+          "display_name": "DevOps 资源管理",
+          "scope": "cluster"
+        },
+        {
+          "name": "gitopsApplication",
+          "display_name": "GitOps 应用",
+          "scope": "workspace"
+        }
+      ],
+      "version": "1.2.4",
+      "kube_version": ">=1.23.0-0",
+      "ks_version": ">=4.2.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "KubeSphere DevOps 提供端到端的工作流，集成主流 CI/CD 工具，帮助不同的组织加快产品上市时间。",
+        "en": "KubeSphere DevOps offers an end-to-end workflow, integrating mainstream CI/CD tools, and helps organizations accelerate the time to market for products."
+      },
+      "display_name": {
+        "zh": "DevOps",
+        "en": "DevOps"
+      },
+      "category": "integration-delivery",
+      "keywords": [
+        "DevOps",
+        "CI/CD",
+        "Integration & Delivery"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "5",
+      "chineseName": "KubeSphere 网关",
+      "englishName": "gateway",
+      "resource_limit": [
+        {
+          "name": "count/gateways.gateway.kubesphere.io",
+          "display_name": "网关数量",
+          "scope": "cluster"
+        },
+        {
+          "name": "count/gateways.gateway.kubesphere.io",
+          "display_name": "网关数量",
+          "scope": "workspace"
+        },
+        {
+          "name": "count/gateways.gateway.kubesphere.io",
+          "display_name": "网关数量",
+          "scope": "namespace"
+        }
+      ],
+      "feature_gates": [
+        {
+          "name": "workspaceGateway",
+          "display_name": "企业空间网关",
+          "scope": "cluster"
+        },
+        {
+          "name": "clusterGateway",
+          "display_name": "集群网关",
+          "scope": "cluster"
+        }
+      ],
+      "version": "1.1.6",
+      "kube_version": ">=1.21.0-0",
+      "ks_version": ">=4.2.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "KubeSphere 网关是聚合服务、管理 KubeSphere 平台外部访问的扩展组件，现已形成“集群、项目、企业空间”三类资源管理维度的网关体系，帮助企业实现各层级网络配置的全覆盖。",
+        "en": "The KubeSphere Gateway is an extension component that aggregates services and manages external access to the KubeSphere platform. It has formed a gateway system with three types of resource management dimensions: \"cluster, project, enterprise space,\" helping enterprises achieve full coverage of network configurations at various levels."
+      },
+      "display_name": {
+        "zh": "KubeSphere 网关",
+        "en": "KubeSphere Gateway"
+      },
+      "category": "networking",
+      "keywords": [
+        "gateway",
+        "kubesphere",
+        "nginx ingress",
+        "ingress controller"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "6",
+      "chineseName": "KubeSphere 应用路由工具",
+      "englishName": "ingress-utils",
+      "version": "1.0.3-beta.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.2.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "KubeSphere 应用路由工具是为应用路由提供多项实用扩展能力的一款扩展组件，帮助企业强化平台中应用路由的全局管理。",
+        "en": "KubeSphere Ingress Utils is an extension component that provides multiple practical extension capabilities for ingress, helping enterprises strengthen the global management of ingress in the platform."
+      },
+      "display_name": {
+        "zh": "KubeSphere 应用路由工具",
+        "en": "KubeSphere Ingress Utils"
+      },
+      "category": "networking",
+      "keywords": [
+        "kubesphere",
+        "ingress",
+        "reusable validation"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "7",
+      "chineseName": "Vertical Pod Autoscaler",
+      "englishName": "vertical-pod-autoscaler",
+      "version": "1.4.1",
+      "kube_version": ">=1.23.0-0",
+      "ks_version": ">=4.2.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "description": {
+        "zh": "Vertical Pod Autoscaler (VPA) 是 Kubernetes Autoscaler 的一个组件，旨在解放用户不必为其 Pod 中的容器设置最新的资源限制和请求。",
+        "en": "Vertical Pod Autoscaler (VPA) is a component of the Kubernetes Autoscaler that frees users from the necessity of setting up-to-date resource limits and requests for the containers in their pods."
+      },
+      "display_name": {
+        "zh": "Vertical Pod Autoscaler",
+        "en": "Vertical Pod Autoscaler"
+      },
+      "category": "computing",
+      "keywords": [
+        "vpa",
+        "autoscaling",
+        "kubernetes"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        }
+      }
+    },
+    {
+      "id": "8",
+      "chineseName": "KubeSphere 节点组",
+      "englishName": "nodegroup",
+      "version": "1.0.2",
+      "kube_version": ">=1.21.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "KubeSphere 节点组",
+        "en": "The KubeSphere NodeGroup"
+      },
+      "display_name": {
+        "zh": "KubeSphere 节点组",
+        "en": "KubeSphere NodeGroup"
+      },
+      "category": "computing",
+      "keywords": [
+        "nodegroup",
+        "kubesphere"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "9",
+      "chineseName": "KubeSphere 应用商店管理",
+      "englishName": "openpitrix",
+      "version": "2.1.2",
+      "kube_version": ">=1.21.0-0",
+      "ks_version": ">=4.2.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "KubeSphere 基于 OpenPitrix 自研的多云应用管理平台，用于上传、审核并管理多云环境中不同类型的应用。",
+        "en": "KubeSphere is based on OpenPitrix's self-developed multi-cloud application management platform, which is used to upload, review and manage different types of applications in multi-cloud environments."
+      },
+      "display_name": {
+        "zh": "KubeSphere 应用商店管理",
+        "en": "KubeSphere App Store Management"
+      },
+      "category": "dev-tools",
+      "keywords": [
+        "kubesphere",
+        "openpitrix",
+        "multi-cloud apps",
+        "app store",
+        "application management",
+        "helm chart"
+      ],
+      "installation_mode": "HostOnly",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "10",
+      "chineseName": "KubeSphere 服务网格",
+      "englishName": "servicemesh",
+      "version": "1.0.4-beta.0",
+      "kube_version": ">=1.21.0-0",
+      "ks_version": ">=4.2.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "KubeSphere 服务网格是一款强大的微服务治理与微服务可视化管理工具。它提供包括蓝绿部署、金丝雀发布与流量镜像三种灰度发布策略，与流量监控、链路追踪两项可观测能力。",
+        "en": "KubeSphere Service Mesh is a powerful microservice governance and microservice visual management tool. It provides three grayscale release strategies including blue-green deployment, canary release and traffic mirroring, as well as two observable capabilities: traffic monitoring and link tracking."
+      },
+      "display_name": {
+        "zh": "KubeSphere 服务网格",
+        "en": "KubeSphere Service Mesh"
+      },
+      "category": "dev-tools",
+      "keywords": [
+        "kubesphere",
+        "servicemesh",
+        "istio",
+        "kiali",
+        "jaeger"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "11",
+      "chineseName": "镜像构建器",
+      "englishName": "s2ibuilder",
+      "version": "0.1.1",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.2.0-0",
+      "home": "https://kubesphere.io",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "从源代码或二进制可执行文件构建容器镜像",
+        "en": "S2I (source to image) and B2I (binary to image)"
+      },
+      "display_name": {
+        "zh": "镜像构建器",
+        "en": "Image Builder"
+      },
+      "category": "integration-delivery",
+      "keywords": [
+        "integration-delivery"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "12",
+      "chineseName": "KubeSphere Spring Cloud",
+      "englishName": "springcloud",
+      "version": "1.0.4",
+      "kube_version": ">=1.21.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "Spring Cloud 扩展组件提供了微服务、微服务配置和微服务网关功能。微服务注册和配置功能基于 Nacos 实现，微服务网关基于 Spring Cloud Gateway 实现。如果您原有的应用程序符合 Nacos 规范，KubeSphere Spring Cloud 功能可以帮助您在保持原有框架不变的同时获得容器化应用的运维效率。",
+        "en": "The Spring Cloud extensions provide microservice, microservice configuration, and microservice gateway functionality. The microservice registration and configuration functionality is based on the Nacos implementation, and the microservice gateway is based on the Spring Cloud Gateway implementation. If your legacy applications are Nacos compliant, KubeSphere Spring Cloud features can help you gain the operational efficiency of containerized applications while keeping your legacy framework intact."
+      },
+      "display_name": {
+        "zh": "KubeSphere Spring Cloud",
+        "en": "KubeSphere Spring Cloud"
+      },
+      "category": "dev-tools",
+      "keywords": [
+        "spring cloud",
+        "kubesphere",
+        "load balancing",
+        "service discovery",
+        "distributed configuration",
+        "microservice"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "13",
+      "chineseName": "KubeSphere 存储",
+      "englishName": "storage-utils",
+      "version": "1.0.4",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "这个扩展组件包含多个与存储有关的实用工具",
+        "en": "This extension contains multiple storage utilities"
+      },
+      "display_name": {
+        "zh": "KubeSphere 存储",
+        "en": "KubeSphere Storage"
+      },
+      "category": "storage",
+      "keywords": [
+        "storage",
+        "pvc",
+        "snapshot",
+        "accessor",
+        "initializer",
+        "nfs"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "14",
+      "chineseName": "KubeSphere 多集群代理连接",
+      "englishName": "tower",
+      "version": "1.1.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.2.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "KubeSphere 的组件 Tower 用于代理连接。Tower 是一种通过代理在集群间建立网络连接的工具。如果主集群无法直接访问成员集群，您可以暴露主集群的代理服务地址，这样可以让成员集群通过代理连接到主集群。当成员集群部署在私有环境（例如 IDC）并且主集群可以暴露代理服务时，适用此连接方法。当您的集群分布部署在不同的云厂商上时，同样适用代理连接的方法。",
+        "en": "The component Tower of KubeSphere is used for agent connection. Tower is a tool for network connection between clusters through the agent. If the host cluster cannot access the member cluster directly, you can expose the proxy service address of the host cluster. This enables the member cluster to connect to the host cluster through the agent. This method is applicable when the member cluster is in a private environment (for example, IDC) and the host cluster is able to expose the proxy service. The agent connection is also applicable when your clusters are distributed across different cloud providers."
+      },
+      "display_name": {
+        "zh": "KubeSphere 多集群代理连接",
+        "en": "KubeSphere Multi-Cluster Agent Connection"
+      },
+      "category": "computing",
+      "keywords": [
+        "multi-cluster"
+      ],
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "15",
+      "chineseName": "联邦集群应用管理",
+      "englishName": "kubefed",
+      "version": "1.1.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.2.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "联邦集群应用管理是一个旨在简化跨多个联邦 Kubernetes 集群管理应用程序的扩展组件，用户可以轻松地在多个联邦集群中部署、更新和管理应用程序，同时提供灵活的配置选项以满足不同需求。",
+        "en": "Application Management for Cluster Federation is an extension aimed at simplifying the management of applications across federated Kubernetes clusters. It offers a unified interface for deploying, updating, and managing applications across federated clusters with flexible configuration options to meet diverse needs."
+      },
+      "display_name": {
+        "zh": "联邦集群应用管理",
+        "en": "Application Management for Cluster Federation"
+      },
+      "category": "computing",
+      "keywords": [
+        "multi-cluster",
+        "federation"
+      ],
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "16",
+      "chineseName": "Volcano",
+      "englishName": "volcano",
+      "version": "1.0.0",
+      "kube_version": ">=1.21.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://volcano.sh",
+      "description": {
+        "zh": "Volcano是CNCF 下首个也是唯一的基于Kubernetes的容器批量计算平台，主要用于高性能计算场景。它提供了Kubernetes目前缺少的一套机制，这些机制通常是机器学习大数据应用、科学计算、特效渲染等多种高性能工作负载所需的。作为一个通用批处理平台，Volcano与几乎所有的主流计算框 架无缝对接，如Spark 、TensorFlow 、PyTorch 、 Flink 、Argo 、MindSpore 、 PaddlePaddle，Ray等。它还提供了包括异构设备调度，网络拓扑感知调度，多集群调度，在离线混部调度等多种调度能力。Volcano的设计 理念建立在15年来多种系统和平台大规模运行各种高性能工作负载的使用经验之上，并结合来自开源社区的最佳思想和实践。",
+        "en": "Volcano is a cloud native system for high-performance workloads, which has been accepted by Cloud Native Computing Foundation (CNCF) as its first and only official container batch scheduling project. Volcano supports popular computing frameworks such as Spark, TensorFlow, PyTorch, Flink, Argo, MindSpore, PaddlePaddle and Ray. Volcano also provides various scheduling capabilities including heterogeneous device scheduling, network topology-aware scheduling, multi-cluster scheduling, online-offline workloads colocation and so on."
+      },
+      "display_name": {
+        "zh": "Volcano",
+        "en": "Volcano"
+      },
+      "category": "ai-machine-learning",
+      "keywords": [
+        "ai-machine-learning"
+      ],
+      "installation_mode": "Multicluster",
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "17",
+      "chineseName": "fluid",
+      "englishName": "fluid",
+      "version": "0.1.1",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://fluid-cloudnative.github.io/",
+      "description": {
+        "zh": "Fluid是一个开源的Kubernetes原生的分布式数据集编排和加速引擎，主要服务于云原生场景下的数据密集型应用，例如大数据应用、AI应用等。",
+        "en": "Fluid is an open - source Kubernetes - native distributed dataset orchestration and acceleration engine, mainly serving data - intensive applications in cloud - native scenarios, such as big data applications, AI applications, etc."
+      },
+      "display_name": {
+        "zh": "fluid",
+        "en": "fluid"
+      },
+      "category": "storage",
+      "keywords": [
+        "storage"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "fluid"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "fluid"
+        },
+        "en": {
+          "name": "fluid"
+        }
+      }
+    },
+    {
+      "id": "18",
+      "chineseName": "算力设备管理",
+      "englishName": "computing-device-manager",
+      "version": "1.1.0",
+      "kube_version": ">=1.23.0-0",
+      "ks_version": ">=4.2.0-0",
+      "home": "https://kubesphere.io",
+      "description": {
+        "zh": "算力设备管理是一个用于 Kubernetes 集群中统一纳管 NVIDIA GPU、 Ascend NPU 等多种异构计算设备的扩展组件，提供资源共享、资源隔离、智能调度、实时监控告警等功能，可提升算力设备资源利用率，降低 AI 集群运维复杂度。",
+        "en": "Computing Device Manager is an extension designed for unified management of heterogeneous computing devices such as NVIDIA GPUs and Ascend NPUs in Kubernetes clusters. It provides capabilities including resource sharing, resource isolation, intelligent scheduling, and real-time monitoring/alerting, thereby improving computing device resource utilization and reducing operational complexity in AI clusters."
+      },
+      "display_name": {
+        "zh": "算力设备管理",
+        "en": "Computing Device Manager"
+      },
+      "category": "ai-machine-learning",
+      "keywords": [
+        "ai-machine-learning"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "kubesphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "19",
+      "chineseName": "OpenKruise",
+      "englishName": "openkruise",
+      "version": "1.0.3",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.io",
+      "description": {
+        "zh": "OpenKruise 是一个基于 Kubernetes 的扩展套件，主要聚焦于云原生应用的自动化，比如 部署、发布、运维以及可用性防护。OpenKruise 提供的绝大部分能力都是基于 CRD 扩展来定义，它们不存在于任何外部依赖，可以运行在任意纯净的 Kubernetes 集群中。",
+        "en": "OpenKruise is an extended component suite for Kubernetes, which mainly focuses on application automations, such as deployment, upgrade, ops and availability protection. Mostly features provided by OpenKruise are built primarily based on CRD extensions. They can work in pure Kubernetes clusters without any other dependences."
+      },
+      "display_name": {
+        "zh": "OpenKruise",
+        "en": "OpenKruise"
+      },
+      "category": "other",
+      "keywords": [
+        "other"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        }
+      }
+    },
+    {
+      "id": "20",
+      "chineseName": "Karmada",
+      "englishName": "karmada",
+      "version": "1.0.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://karmada.io/docs/",
+      "description": {
+        "zh": "Karmada 是一个 Kubernetes 管理系统，使您能够在多个 Kubernetes 集群和云中运行云原生应用程序，而无需更改应用程序。",
+        "en": "Karmada is a Kubernetes management system that enables you to run your cloud-native applications across multiple Kubernetes clusters and clouds, with no changes to your applications."
+      },
+      "display_name": {
+        "zh": "Karmada",
+        "en": "Karmada"
+      },
+      "category": "computing",
+      "keywords": [
+        "multi-cluster",
+        "federation"
+      ],
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "21",
+      "chineseName": "混沌工程",
+      "englishName": "chaos-mesh",
+      "version": "1.0.1",
+      "kube_version": ">=1.22.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://chaos-mesh.org",
+      "description": {
+        "zh": "Chaos Mesh 是一个开源的云原生混沌工程平台，提供丰富的故障模拟类型，具有强大的故障场景编排能力，方便用户在开发测试中以及生产环境中模拟现实世界中可能出现的各类异常，帮助用户发现系统潜在的问题。 Chaos Mesh 提供完善的可视化操作，旨在降低用户进行混沌工程的门槛。用户可以方便地在 Web UI 界面上设计自己的混沌场景，以及监控混沌实验的运行状态。",
+        "en": "Chaos Mesh is an open source cloud-native Chaos Engineering platform. It offers various types of fault simulation and has an enormous capability to orchestrate fault scenarios. Using Chaos Mesh, you can conveniently simulate various abnormalities that might occur in reality during the development, testing, and production environments and find potential problems in the system. To lower the threshold for a Chaos Engineering project, Chaos Mesh provides you with a visualization operation.You can easily design your Chaos scenarios on the Web UI and monitor the status of Chaos experiments."
+      },
+      "display_name": {
+        "zh": "混沌工程",
+        "en": "Chaos Mesh"
+      },
+      "category": "dev-tools",
+      "keywords": [
+        "experiment",
+        "simulate abnormality"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "22",
+      "chineseName": "EdgeWize",
+      "englishName": "edgewize",
+      "version": "3.1.2",
+      "kube_version": ">=1.21.0",
+      "ks_version": ">=4.1.0-0",
+      "home": "https://kubesphere.io",
+      "description": {
+        "zh": "EdgeWize 边缘计算平台是一款面向边缘计算场景的云边协同基础设施平台，它建立在业界流行的 Kubernetes 容器编排引擎之上，借助可拔插架构整合并优化边缘计算场景下的关键功能模块，为企业用户提供可落地、可迭代、面向场景的综合边缘计算解决方案，帮助企业用户快速构建一个开放、易用、智能的边缘容器应用管理平台，助力客户实现业务的边缘化转型。",
+        "en": "The EdgeWize edge computing platform is a cloud-edge collaborative infrastructure platform designed for edge computing scenarios. It is built on top of the popular Kubernetes container orchestration engine in the industry. Using a pluggable architecture, it integrates and optimizes key functional modules for edge computing scenarios. It provides enterprise users with a deployable, iterative, and scenario-oriented comprehensive edge computing solution. This helps enterprise users quickly build an open, easy-to-use, and intelligent edge container application management platform, assisting customers in achieving edge-oriented business transformation."
+      },
+      "display_name": {
+        "zh": "EdgeWize",
+        "en": "EdgeWize"
+      },
+      "category": "edge-computing",
+      "keywords": [
+        "Edge",
+        "Computing",
+        "Observability",
+        "Monitoring",
+        "KubeEdge",
+        "OpenYurt"
+      ],
+      "installation_mode": "HostOnly",
+      "maintainers": [
+        {
+          "name": "青云科技",
+          "email": "support@kubesphere.cloud"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "青云科技",
+          "email": "support@kubesphere.cloud",
+          "url": "https://www.qingcloud.com"
+        },
+        "en": {
+          "name": "QingCloud",
+          "email": "support@kubesphere.cloud",
+          "url": "https://www.qingcloud.com"
+        }
+      }
+    },
+    {
+      "id": "23",
+      "chineseName": "KubeEdge 边缘计算框架",
+      "englishName": "kubeedge",
+      "version": "1.13.1",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "KubeEdge 是一个开源的系统，可将本机容器化应用编排和管理扩展到边缘端设备。",
+        "en": "KubeEdge is built upon Kubernetes and extends native containerized application orchestration and device management to hosts at the Edge."
+      },
+      "display_name": {
+        "zh": "KubeEdge 边缘计算框架",
+        "en": "KubeEdge Edge Computing Framework"
+      },
+      "category": "computing",
+      "keywords": [
+        "Edge Computing",
+        "KubeEdge"
+      ],
+      "installation_mode": "HostOnly",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "24",
+      "chineseName": "KubeEye 巡检",
+      "englishName": "kubeeye",
+      "version": "1.0.1",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "description": {
+        "zh": "KubeEye提供了一种灵活且可扩展的kubernetes集群巡检方式，支持通过自定义巡检规则以及自定义巡检计划对kubernetes集群中的节点、工作负载以及 服务进行自动化巡检，并自动将巡检结果数据采集并生成巡检报告。",
+        "en": "KubeEye provides a flexible and scalable way to inspect Kubernetes clusters. It supports automatic inspection of nodes, workloads, and services in Kubernetes clusters through custom inspection rules and plans, and automatically collects inspection result data to generate inspection reports."
+      },
+      "display_name": {
+        "zh": "KubeEye 巡检",
+        "en": "KubeEye Inspection"
+      },
+      "category": "observability",
+      "keywords": [
+        "Inspection"
+      ],
+      "installation_mode": "HostOnly",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "25",
+      "chineseName": "WizTelemetry 告警",
+      "englishName": "whizard-alerting",
+      "resource_limit": [
+        {
+          "name": "count/globalrulegroups.alerting.kubesphere.io",
+          "display_name": "全局规则组数量",
+          "scope": "global"
+        },
+        {
+          "name": "count/rules.globalrulegroups.alerting.kubesphere.io",
+          "display_name": "全局规则组规则数量",
+          "scope": "global"
+        },
+        {
+          "name": "count/clusterrulegroups.alerting.kubesphere.io",
+          "display_name": "集群规则组数量",
+          "scope": "cluster"
+        },
+        {
+          "name": "count/rulegroups.alerting.kubesphere.io",
+          "display_name": "规则组数量",
+          "scope": "cluster"
+        },
+        {
+          "name": "count/rules.clusterrulegroups.alerting.kubesphere.io",
+          "display_name": "集群规则组规则数量",
+          "scope": "cluster"
+        },
+        {
+          "name": "count/rules.rulegroups.alerting.kubesphere.io",
+          "display_name": "规则组规则数量",
+          "scope": "cluster"
+        },
+        {
+          "name": "count/rules.rulegroups.alerting.kubesphere.io",
+          "display_name": "规则组规则数量",
+          "scope": "namespace"
+        }
+      ],
+      "version": "1.2.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "WizTelemetry 告警是 KubeSphere 团队开发的 WizTelemetry 可观测平台中基于监控指标进行告警管理的扩展组件。",
+        "en": "As a part of KubeSphere's WizTelemetry Observability Platform, WizTelemetry Alerting provides alerting management based on metrics data."
+      },
+      "display_name": {
+        "zh": "WizTelemetry 告警",
+        "en": "WizTelemetry Alerting"
+      },
+      "category": "observability",
+      "keywords": [
+        "Alerting",
+        "Observability"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "26",
+      "chineseName": "WizTelemetry 通知",
+      "englishName": "whizard-notification",
+      "resource_limit": [
+        {
+          "name": "count/receivers.notification.kubesphere.io",
+          "display_name": "接收器数量",
+          "scope": "global"
+        },
+        {
+          "name": "count/silent-policy.notification.kubesphere.io",
+          "display_name": "静默策略数量",
+          "scope": "global"
+        }
+      ],
+      "version": "2.7.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "WizTelemetry 通知 KubeSphere 团队开发的 WizTelemetry 可观测平台中提供通知功能的扩展组件，可提供电子邮件、Slack、企业微信、钉钉、飞书、Webhook 等多渠道通知功能。",
+        "en": "As a part of KubeSphere's WizTelemetry Observability Platform, WizTelemetry Notification provides multi-channel notification capabilities such as email, Slack, WeChat, DingTalk, Feishu, and Webhook, etc."
+      },
+      "display_name": {
+        "zh": "WizTelemetry 通知",
+        "en": "WizTelemetry Notification"
+      },
+      "category": "observability",
+      "keywords": [
+        "Observability",
+        "Notification"
+      ],
+      "installation_mode": "HostOnly",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "27",
+      "chineseName": "WizTelemetry 日志",
+      "englishName": "whizard-logging",
+      "feature_gates": [
+        {
+          "name": "whizardLogging",
+          "display_name": "WizTelemetry 日志",
+          "scope": "global"
+        },
+        {
+          "name": "whizardLogging",
+          "display_name": "WizTelemetry 日志",
+          "scope": "cluster"
+        }
+      ],
+      "version": "1.4.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "WizTelemetry 日志是 KubeSphere 团队开发的 WizTelemetry 可观测平台中用于日志采集、处理、存储和查询的扩展组件。",
+        "en": "As a part of KubeSphere's WizTelemetry Observability Platform, WizTelemetry Logging provides log collection, processing, storage and query."
+      },
+      "display_name": {
+        "zh": "WizTelemetry 日志",
+        "en": "WizTelemetry Logging"
+      },
+      "category": "observability",
+      "keywords": [
+        "Logging",
+        "Observability"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "28",
+      "chineseName": "WizTelemetry 审计",
+      "englishName": "whizard-auditing",
+      "version": "1.4.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "WizTelemetry 审计是 KubeSphere 团队开发的 WizTelemetry 可观测平台中用于对 Kubernetes 和 KubeSphere 的审计信息进行管理的扩展组件。",
+        "en": "As a part of KubeSphere's WizTelemetry Observability Platform, WizTelemetry Auditing provides auditing management for Kubernetes and KubeSphere."
+      },
+      "display_name": {
+        "zh": "WizTelemetry 审计",
+        "en": "WizTelemetry Auditing"
+      },
+      "category": "observability",
+      "keywords": [
+        "Observability",
+        "Auditing"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "29",
+      "chineseName": "WizTelemetry 事件",
+      "englishName": "whizard-events",
+      "version": "1.4.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "WizTelemetry 事件是 KubeSphere 团队开发的 WizTelemetry 可观测平台中用于 Kubernetes 事件导出的扩展组件。",
+        "en": "As a part of KubeSphere's WizTelemetry Observability Platform, WizTelemetry Events provides the exporting of Kubernetes events."
+      },
+      "display_name": {
+        "zh": "WizTelemetry 事件",
+        "en": "WizTelemetry Events"
+      },
+      "category": "observability",
+      "keywords": [
+        "Observability",
+        "Events"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "30",
+      "chineseName": "WizTelemetry 事件告警",
+      "englishName": "whizard-telemetry-ruler",
+      "version": "1.5.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "WizTelemetry 事件告警是 KubeSphere 团队开发的 WizTelemetry 可观测平台中提供事件告警和日志告警功能的扩展组件。它可以为 K8s 原生事件、K8s/KubeSphere 审计事件和 K8s 日志定义告警规则，对传入的事件数据和日志数据进行评估，并将告警发送到指定的接收器如 HTTP 端点等。",
+        "en": "As a part of KubeSphere's WizTelemetry Observability Platform, WizTelemetry Events Alerting provides event alerting and log alerting capabilities which can define alerting rules for K8s native events, K8s/KubeSphere auditing events, and K8s logs, evaluate incoming event data and log data, and send alerts to specified receivers such as HTTP endpoints, etc."
+      },
+      "display_name": {
+        "zh": "WizTelemetry 事件告警",
+        "en": "WizTelemetry Events Alerting"
+      },
+      "category": "observability",
+      "keywords": [
+        "Observability",
+        "Events Alerting"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "31",
+      "chineseName": "WizTelemetry 全局监控",
+      "englishName": "whizard-monitoring-pro",
+      "version": "1.0.1",
+      "kube_version": ">=1.23.0-0",
+      "ks_version": ">=4.2.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "description": {
+        "zh": "WizTelemetry 全局监控是 KubeSphere 团队开发的 WizTelemetry 可观测平台中提供跨集群监控、多集群告警的扩展组件。将监控指标集中化长期存储，使集群监控栈更加轻量化，并可支持跨集群聚合查询及告警，提供更丰富的监控视图。",
+        "en": "As a part of KubeSphere's WizTelemetry Observability Platform that provides monitoring capabilities, WizTelemetry Global Monitoring provides cross-cluster monitoring and multi-cluster alerting capabilities. It is a lightweight monitoring stack that centralizes long-term storage of monitoring metrics and allows for cross-cluster aggregation querying and alerting, providing more rich monitoring views."
+      },
+      "display_name": {
+        "zh": "WizTelemetry 全局监控",
+        "en": "WizTelemetry Global Monitoring"
+      },
+      "category": "observability",
+      "keywords": [
+        "observability",
+        "monitoring",
+        "whizard"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "32",
+      "chineseName": "OpenSearch 分布式检索与分析引擎",
+      "englishName": "opensearch",
+      "version": "2.11.2",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "OpenSearch 是 KubeSphere 团队开发的 WizTelemetry 可观测平台中内置的分布式检索与分析引擎，用于存储、检索与分析日志、审计、事件、通知历史等可观测数据。",
+        "en": "OpenSearch is the built-in distributed search and analytics engine of KubeSphere's WizTelemetry Observability Platform, which is used to store,search and analyze observability data including logs, auditing events, K8s events, and notification history etc."
+      },
+      "display_name": {
+        "zh": "OpenSearch 分布式检索与分析引擎",
+        "en": "OpenSearch Distributed Search and Analytics Engine"
+      },
+      "category": "observability",
+      "keywords": [
+        "Logging",
+        "Observability"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "33",
+      "chineseName": "WizTelemetry 平台服务",
+      "englishName": "whizard-telemetry",
+      "version": "2.2.1",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.2.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "WizTelemetry 平台服务是 KubeSphere 团队开发的 WizTelemetry 可观测平台中各扩展组件的公共服务。它是各个可观测性扩展组件通用的 APIServer，为所有可观测性扩展组件提供公共的后端平台服务。",
+        "en": "WizTelemetry Platform Service is a common service for all observability extensions of KubeSphere's WizTelemetry Observability Platform. It is a common APIServer for all observability extensions, providing common backend platform services for all observability extensions."
+      },
+      "display_name": {
+        "zh": "WizTelemetry 平台服务",
+        "en": "WizTelemetry Platform Service"
+      },
+      "category": "observability",
+      "keywords": [
+        "APIServer",
+        "Observability",
+        "Monitoring",
+        "Logging"
+      ],
+      "installation_mode": "HostOnly",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "34",
+      "chineseName": "WizTelemetry 监控",
+      "englishName": "whizard-monitoring",
+      "feature_gates": [
+        {
+          "name": "customMonitoring",
+          "display_name": "自定义监控",
+          "scope": "workspace"
+        },
+        {
+          "name": "customMonitoring",
+          "display_name": "自定义监控",
+          "scope": "cluster"
+        }
+      ],
+      "version": "1.2.2",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.2.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "WizTelemetry 监控是 KubeSphere 团队开发的 WizTelemetry 可观测平台中提供监控功能的扩展组件。可提供多租户视角的云原生资源监控能力, 包括针对多集群, 节点, 工作负载、GPU、K8s 控制面等对象的核心监控指标实时和历史数据展示等功能。",
+        "en": "As a part of KubeSphere's WizTelemetry Observability Platform that provides monitoring capabilities, WizTelemetry Monitoring provides multi-tenant monitoring capabilities for cloud-native resources, including real-time and historical data display of core monitoring metrics for multi-cluster, nodes, workloads, GPU, K8s control plane and other objects."
+      },
+      "display_name": {
+        "zh": "WizTelemetry 监控",
+        "en": "WizTelemetry Monitoring"
+      },
+      "category": "observability",
+      "keywords": [
+        "Observability",
+        "Monitoring",
+        "Prometheus"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "35",
+      "chineseName": "WizTelemetry 数据流水线",
+      "englishName": "vector",
+      "version": "1.1.4",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "WizTelemetry 数据流水线是 KubeSphere 团队开发的 WizTelemetry 可观测平台中提供可观测性数据收集、转换和路由能力的扩展组件。该扩展组件基于 vector (https://vector.dev/) 做了定制，定制内容详见 https://github.com/WizTelemetry/vector-helm-charts/tree/ks-vector-extension",
+        "en": "As a part of KubeSphere's WizTelemetry Observability Platform, WizTelemetry data pipeline provides the ability to collect, transform and route observability data. This extension is based on vector (https://vector.dev/) and customized for WizTelemetry. For more details, please refer to https://github.com/WizTelemetry/vector-helm-charts/tree/ks-vector-extension."
+      },
+      "display_name": {
+        "zh": "WizTelemetry 数据流水线",
+        "en": "WizTelemetry Data Pipeline"
+      },
+      "category": "observability",
+      "keywords": [
+        "monitoring-logging"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "36",
+      "chineseName": "Metrics Server",
+      "englishName": "metrics-server",
+      "version": "0.8.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "Metrics Server 是一个可扩展、高效的容器资源度量源，为 Kubernetes 内置的自动扩展管道提供服务。",
+        "en": "Scalable and efficient source of container resource metrics for Kubernetes built-in autoscaling pipelines"
+      },
+      "display_name": {
+        "zh": "Metrics Server",
+        "en": "Metrics Server"
+      },
+      "category": "computing",
+      "keywords": [
+        "kubernetes",
+        "metrics-server",
+        "metrics"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "37",
+      "chineseName": "Grafana Loki for WizTelemetry",
+      "englishName": "loki",
+      "version": "1.0.2",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://grafana.com",
+      "docs": "https://grafana.com/docs/loki",
+      "description": {
+        "zh": "Loki 是一个受 Prometheus 启发的水平可扩展、高可用、多租户日志聚合系统。它的设计非常经济高效且易于操作。它不索引日志的内容，而是为每个日志流建立一组标签。",
+        "en": "Loki is a horizontally-scalable, highly-available, multi-tenant log aggregation system inspired by Prometheus. It is designed to be very cost effective and easy to operate. It does not index the contents of the logs, but rather a set of labels for each log stream."
+      },
+      "display_name": {
+        "zh": "Grafana Loki for WizTelemetry",
+        "en": "Grafana Loki for WizTelemetry"
+      },
+      "category": "observability",
+      "keywords": [
+        "Logging",
+        "Observability"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "grafana"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "grafana",
+          "url": "https://grafana.com"
+        },
+        "en": {
+          "name": "grafana",
+          "url": "https://grafana.com"
+        }
+      }
+    },
+    {
+      "id": "38",
+      "chineseName": "RadonDB DMP",
+      "englishName": "dmp",
+      "version": "2.2.0",
+      "kube_version": ">=1.21.0-0",
+      "ks_version": ">=4.2.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "RadonDB DMP 是一款面向 Kubernetes 多云场景的企业级云原生数据库管理平台，完全可视化统一管理，最快秒级部署数据库，同时聚合全场景运维能力，助力“云原生 + AI”数据引擎增智提效。",
+        "en": "RadonDB DMP is an enterprise-grade cloud-native database management platform designed for Kubernetes multi-cloud environments. It provides fully visualized unified management, enables the fastest deployment of databases in seconds, and aggregates comprehensive operational capabilities across all scenarios, empowering 'cloud-native + AI' data engines for increased intelligence and efficiency."
+      },
+      "display_name": {
+        "zh": "RadonDB DMP",
+        "en": "RadonDB DMP"
+      },
+      "category": "database",
+      "keywords": [
+        "kubernetes",
+        "kubesphere",
+        "database management",
+        "dmp",
+        "dbaas",
+        "message queue"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "39",
+      "chineseName": "Grafana Alloy for WizTelemetry",
+      "englishName": "alloy",
+      "version": "1.0.1",
+      "kube_version": ">=1.23.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://grafana.com",
+      "docs": "https://grafana.com/docs/alloy",
+      "description": {
+        "zh": "Grafana Alloy 是一个厂商中立的 OpenTelemetry (OTel) Collector 发行版。Alloy 独特地结合了社区中最优秀的开源可观测性信号。Alloy 为 OTel、Prometheus、Pyroscope、Loki 以及许多其他指标、日志、追踪和剖析工具提供原生管道。此外，你可以使用 Alloy 管道执行不同的任务，例如在 Loki 和 Mimir 中配置告警规则。Alloy 与 OTel Collector、Prometheus Agent 和 Promtail 完全兼容。你可以将 Alloy 作为这些解决方案的替代方案，或将其组合成包含多个采集器和代理的混合系统。你可以在 IT 基础设施的任何位置部署 Alloy，并将其与 Grafana LGTM 技术栈、Grafana Cloud 的遥测后端或任何其他供应商的兼容后端配对使用。Alloy 具有灵活性，你可以轻松配置它以适应本地部署、云端部署或两者混合部署的需求。",
+        "en": "Grafana Alloy is a vendor-neutral distribution of the OpenTelemetry (OTel) Collector. Alloy uniquely combines the very best OSS observability signals in the community. Alloy offers native pipelines for OTel, Prometheus, Pyroscope, Loki, and many other metrics, logs, traces, and profile tools. In addition, you can use Alloy pipelines to do different tasks, such as configure alert rules in Loki and Mimir. Alloy is fully compatible with the OTel Collector, Prometheus Agent, and Promtail. You can use Alloy as an alternative to either of these solutions or combine it into a hybrid system of multiple collectors and agents. You can deploy Alloy anywhere within your IT infrastructure and pair it with your Grafana LGTM stack, a telemetry backend from Grafana Cloud, or any other compatible backend from any other vendor. Alloy is flexible, and you can easily configure it to fit your needs in on-prem, cloud-only, or a mix of both."
+      },
+      "display_name": {
+        "zh": "Grafana Alloy for WizTelemetry",
+        "en": "Grafana Alloy for WizTelemetry"
+      },
+      "category": "observability",
+      "keywords": [
+        "observability"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "grafana"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "grafana",
+          "url": "https://grafana.com"
+        },
+        "en": {
+          "name": "grafana",
+          "url": "https://grafana.com"
+        }
+      }
+    },
+    {
+      "id": "40",
+      "chineseName": "cert-manager",
+      "englishName": "cert-manager",
+      "version": "1.0.1",
+      "kube_version": ">=1.22.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://cert-manager.io/",
+      "description": {
+        "zh": "cert-manager 可以为您集群中的 workload 自动创建和更新证书",
+        "en": "cert-manager creates TLS certificates for workloads in your Kubernetes and renews the certificates before they expire."
+      },
+      "display_name": {
+        "zh": "cert-manager",
+        "en": "cert-manager"
+      },
+      "category": "security",
+      "keywords": [
+        "security"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "41",
+      "chineseName": "DeepSeek",
+      "englishName": "deepseek",
+      "version": "0.1.1",
+      "kube_version": ">=1.22.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://ollama.com/library/deepseek-r1",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "用于在集群中部署 DeepSeek 大语言模型服务",
+        "en": "Used to deploy DeepSeek large language model service in the cluster"
+      },
+      "display_name": {
+        "zh": "DeepSeek",
+        "en": "DeepSeek"
+      },
+      "category": "deepseek",
+      "keywords": [
+        "ollama",
+        "AI",
+        "LLM",
+        "deepseek"
+      ],
+      "installation_mode": "HostOnly",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "42",
+      "chineseName": "Apache Doris for WizTelemetry",
+      "englishName": "doris",
+      "version": "1.1.0",
+      "kube_version": ">=1.19.0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "Apache Doris 是一款基于 MPP 架构的高性能、实时的分析型数据库，以高效、简单、统一的特点被人们所熟知，仅需亚秒级响应时间即可返回海量数据下查询结果，不仅可以支持高并发的点查询场景，也能支持高吞吐的复杂分析场景。基于此，Apache Doris 能够较好的满足报表分析、即席查询、统一数仓构建、数据湖联邦查询加速等使用场景，用户可以在此之上构建大屏看板、用户行为分析、AB 实验平台、日志检索分析、用户画像分析、订单分析等应用。",
+        "en": "Apache Doris is an MPP-based real-time data warehouse known for its high query speed. For queries on large datasets, it returns results in sub-seconds. It supports both high-concurrent point queries and high-throughput complex analysis. It can be used for report analysis, ad-hoc queries, unified data warehouse, and data lake query acceleration. Based on Apache Doris, users can build applications for user behavior analysis, A/B testing platform, log analysis, user profile analysis, and e-commerce order analysis."
+      },
+      "display_name": {
+        "zh": "Apache Doris for WizTelemetry",
+        "en": "Apache Doris for WizTelemetry"
+      },
+      "category": "observability",
+      "keywords": [
+        "Database",
+        "MPP",
+        "Observability"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "43",
+      "chineseName": "Grafana for WizTelemetry",
+      "englishName": "grafana",
+      "version": "10.4.20",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://grafana.com",
+      "docs": "https://grafana.com/docs/grafana",
+      "description": {
+        "zh": "Grafana 是一个开放且可组合的观测和数据可视化平台，可以从多个来源（如Prometheus、Loki、Elasticsearch、InfluxDB、Postgres等）可视化指标、日志和跟踪数据。",
+        "en": "The open and composable observability and data visualization platform. Visualize metrics, logs, and traces from multiple sources like Prometheus, Loki, Elasticsearch, InfluxDB, Postgres and many more."
+      },
+      "display_name": {
+        "zh": "Grafana for WizTelemetry",
+        "en": "Grafana for WizTelemetry"
+      },
+      "category": "observability",
+      "keywords": [
+        "observability",
+        "monitoring",
+        "metric"
+      ],
+      "installation_mode": "HostOnly",
+      "maintainers": [
+        {
+          "name": "grafana"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "grafana",
+          "url": "https://grafana.com"
+        },
+        "en": {
+          "name": "grafana",
+          "url": "https://grafana.com"
+        }
+      }
+    },
+    {
+      "id": "44",
+      "chineseName": "LeaderWorkerSet",
+      "englishName": "lws",
+      "version": "1.0.0",
+      "kube_version": ">=1.24.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.io",
+      "description": {
+        "zh": "LeaderWorkerSet：一种用于将一组 Pod 作为复制单元部署的 API。它旨在解决 AI/ML 推理工作负载的常见部署模式，特别是多主机推理工作负载，其中LLM将被分片并在多个节点上的多个设备上运行。初始设计和提案可在以下网址找到：http://bit.ly/k8s-LWS。",
+        "en": "LeaderWorkerSet: An API for deploying a group of pods as a unit of replication. It aims to address common deployment patterns of AI/ML inference workloads, especially multi-host inference workloads where the LLM will be sharded and run across multiple devices on multiple nodes. The initial design and proposal can be found at: http://bit.ly/k8s-LWS."
+      },
+      "display_name": {
+        "zh": "LeaderWorkerSet",
+        "en": "LeaderWorkerSet"
+      },
+      "category": "ai-machine-learning",
+      "keywords": [
+        "ai-machine-learning"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "45",
+      "chineseName": "NVIDIA GPU Operator",
+      "englishName": "nvidia-gpu-operator",
+      "version": "23.9.2",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/overview.html",
+      "docs": "https://github.com/NVIDIA/gpu-operator",
+      "description": {
+        "zh": "NVIDIA GPU Operator 在 Kubernetes 上创建、配置和管理 GPU。",
+        "en": "NVIDIA GPU Operator creates/configures/manages GPUs atop Kubernetes"
+      },
+      "display_name": {
+        "zh": "NVIDIA GPU Operator",
+        "en": "NVIDIA GPU Operator"
+      },
+      "category": "ai-machine-learning",
+      "keywords": [
+        "ai-machine-learning",
+        "gpu",
+        "cuda",
+        "compute",
+        "operator",
+        "deep learning",
+        "monitoring",
+        "tesla"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "NVIDIA",
+          "url": "http://www.nvidia.com"
+        },
+        "en": {
+          "name": "NVIDIA",
+          "url": "http://www.nvidia.com"
+        }
+      }
+    },
+    {
+      "id": "46",
+      "chineseName": "OAuth2-Proxy",
+      "englishName": "oauth2-proxy",
+      "version": "7.6.3",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.io",
+      "docs": "https://oauth2-proxy.github.io/oauth2-proxy/",
+      "description": {
+        "zh": "用 OAuth2-Proxy 轻松搞定统一认证，保护你的后端应用！",
+        "en": "Easily handle unified authentication with OAuth2-Proxy and protect your backend apps!"
+      },
+      "display_name": {
+        "zh": "OAuth2-Proxy",
+        "en": "OAuth2-Proxy"
+      },
+      "category": "security",
+      "keywords": [
+        "security",
+        "oauth2-proxy",
+        "oauth2",
+        "authentication"
+      ],
+      "installation_mode": "HostOnly",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.io"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.io"
+        }
+      }
+    },
+    {
+      "id": "47",
+      "chineseName": "Grafana Tempo for WhizTelemetry",
+      "englishName": "tempo",
+      "version": "1.0.0",
+      "kube_version": ">=1.23.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://grafana.com",
+      "docs": "https://grafana.com/docs/tempo",
+      "description": {
+        "zh": "Grafana Tempo 是一个开源、易于使用且高度可扩展的分布式跟踪后端。Tempo 具有成本效益，仅需对象存储即可运行，并且与 Grafana、Prometheus 和 Loki 深度集成。Tempo 可以提取常见的开源跟踪协议，包括 Jaeger、Zipkin 和 OpenTelemetry。",
+        "en": "Grafana Tempo is cost-efficient and only requires an object storage to operate. Tempo is deeply integrated with Grafana, Mimir, Prometheus, and Loki. You can use Tempo with open source tracing protocols, including Jaeger, Zipkin, or OpenTelemetry."
+      },
+      "display_name": {
+        "zh": "Grafana Tempo for WhizTelemetry",
+        "en": "Grafana Tempo for WhizTelemetry"
+      },
+      "category": "observability",
+      "keywords": [
+        "Tracing",
+        "Observability"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "grafana"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "grafana",
+          "url": "https://grafana.com"
+        },
+        "en": {
+          "name": "grafana",
+          "url": "https://grafana.com"
+        }
+      }
+    },
+    {
+      "id": "48",
+      "chineseName": "WizTelemetry 网络可观测",
+      "englishName": "wiztelemetry-bpfconductor",
+      "version": "2.0.1",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.1.2-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "WizTelemetry 网络可观测 作为 KubeSphere 发布的 WizTelemetry 可观测性平台的一部分，提供了基于 eBPF 的网络可观测能力。其中包含了 WizTelemetry BPFConductor 组件，用于在 Kubernetes 集群中高效部署和管理 eBPF 程序或插件。同时内置了多个网络可观测性相关的 eBPF 程序/插件，能够提供对第 4 层网络流量、第 7 层 HTTP 流量以及网络拓扑的深入洞察。",
+        "en": "WizTelemetry Network Observability, as part of KubeSphere's WizTelemetry Observability Platform, provides eBPF-based capabilities for deep network observability. It includes the WizTelemetry BPFConductor component, which enables efficient deployment and management of eBPF programs and plugins within Kubernetes clusters. It comes with a set of built-in eBPF programs focused on network observability, providing in-depth visibility into Layer 4 network traffic, Layer 7 HTTP traffic, and network topology."
+      },
+      "display_name": {
+        "zh": "WizTelemetry 网络可观测",
+        "en": "WizTelemetry Network Observability"
+      },
+      "category": "observability",
+      "keywords": [
+        "Observability",
+        "eBPF",
+        "Network Monitoring"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "49",
+      "chineseName": "WizTelemetry 链路追踪",
+      "englishName": "wiztelemetry-tracing",
+      "version": "1.0.6",
+      "kube_version": ">=1.23.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "WizTelemetry 链路追踪是 WizTelemetry 可观测平台中以 OpenTelemetry 为标准提供分布式链路追踪功能的组件。",
+        "en": "WizTelemetry Tracing is a component of the WizTelemetry Observability Platform that provides distributed tracing functionality based on the OpenTelemetry standard."
+      },
+      "display_name": {
+        "zh": "WizTelemetry 链路追踪",
+        "en": "WizTelemetry Tracing"
+      },
+      "category": "observability",
+      "keywords": [
+        "Tracing",
+        "Observability"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "50",
+      "chineseName": "WizTelemetry Pro版V1",
+      "englishName": "wiztelemetry-pro-v1"
+    },
+    {
+      "id": "51",
+      "chineseName": "Higress",
+      "englishName": "higress",
+      "version": "2.1.4",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://higress.ai",
+      "docs": "https://higress.cn/docs",
+      "description": {
+        "zh": "Higress 是一款云原生 API 网关，内核基于 Istio 和 Envoy，可以用 Go/Rust/JS 等编写 Wasm 插件，提供了数十个现成的通用插件，以及开箱即用的控制台。",
+        "en": "Higress is a cloud-native API gateway based on Istio and Envoy, which can be extended with Wasm plugins written in Go/Rust/JS. It provides dozens of ready-to-use general-purpose plugins and an out-of-the-box console."
+      },
+      "display_name": {
+        "zh": "Higress",
+        "en": "Higress"
+      },
+      "category": "networking",
+      "keywords": [
+        "gateway",
+        "llm",
+        "mcp"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "cr7258",
+          "email": "chengzw258@163.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "Higress",
+          "url": "https://higress.ai"
+        },
+        "en": {
+          "name": "Higress",
+          "url": "https://higress.ai"
+        }
+      }
+    },
+    {
+      "id": "52",
+      "chineseName": "ob-operator",
+      "englishName": "ob-operator",
+      "version": "2.3.2",
+      "kube_version": ">=1.22.15-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://open.oceanbase.com",
+      "description": {
+        "zh": "Kubernetes operator for OceanBase",
+        "en": "Kubernetes operator for OceanBase"
+      },
+      "display_name": {
+        "zh": "ob-operator",
+        "en": "ob-operator"
+      },
+      "category": "database",
+      "keywords": [
+        "database",
+        "oceanbase"
+      ],
+      "installation_mode": "HostOnly",
+      "maintainers": [
+        {
+          "name": "Chris Sun",
+          "email": "hongxin.sun.vip@gmail.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "OceanBase",
+          "url": "https://www.oceanbase.com"
+        },
+        "en": {
+          "name": "OceanBase",
+          "url": "https://en.oceanbase.com"
+        }
+      }
+    },
+    {
+      "id": "53",
+      "chineseName": "oceanbase-dashboard",
+      "englishName": "oceanbase-dashboard",
+      "version": "0.4.0",
+      "kube_version": ">=1.22.15-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://open.oceanbase.com",
+      "description": {
+        "zh": "A dashboard for managing OceanBase resources in Kubernetes",
+        "en": "A dashboard for managing OceanBase resources in Kubernetes"
+      },
+      "display_name": {
+        "zh": "oceanbase-dashboard",
+        "en": "oceanbase-dashboard"
+      },
+      "category": "database",
+      "keywords": [
+        "database",
+        "oceanbase"
+      ],
+      "installation_mode": "HostOnly",
+      "maintainers": [
+        {
+          "name": "Chris Sun",
+          "email": "hongxin.sun.vip@gmail.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "OceanBase",
+          "url": "https://www.oceanbase.com"
+        },
+        "en": {
+          "name": "OceanBase",
+          "url": "https://en.oceanbase.com"
+        }
+      }
+    },
+    {
+      "id": "54",
+      "chineseName": "KubeSphere DMP",
+      "englishName": "ks-dmp"
+    },
+    {
+      "id": "55",
+      "chineseName": "Fluid-Console",
+      "englishName": "fluid-console",
+      "version": "0.6.1",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.io",
+      "description": {
+        "zh": "Fluid Console is a web console for Fluid.",
+        "en": "Fluid Console is a web console for Fluid."
+      },
+      "display_name": {
+        "zh": "Fluid-Console",
+        "en": "Fluid-Console"
+      },
+      "category": "other",
+      "keywords": [
+        "other"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        }
+      }
+    },
+    {
+      "id": "56",
+      "chineseName": "边缘AI网关",
+      "englishName": "edge-ai-gateway",
+      "version": "0.1.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.io",
+      "description": {
+        "zh": "支持对访问边缘部署的推理模型服务进行鉴权访问",
+        "en": "Supports authenticated access to the inference model services deployed at the edge."
+      },
+      "display_name": {
+        "zh": "边缘AI网关",
+        "en": "edge-ai-gateway"
+      },
+      "category": "ai-machine-learning",
+      "keywords": [
+        "ai-machine-learning"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "青云科技",
+          "email": "support@kubesphere.cloud"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "青云科技",
+          "email": "support@kubesphere.cloud",
+          "url": "https://www.qingcloud.com"
+        },
+        "en": {
+          "name": "QingCloud",
+          "email": "support@kubesphere.cloud",
+          "url": "https://www.qingcloud.com"
+        }
+      }
+    },
+    {
+      "id": "57",
+      "chineseName": "边缘计算设备管理",
+      "englishName": "edge-compute-device",
+      "version": "3.1.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.io",
+      "description": {
+        "zh": "边缘计算设备管理 用于管理边缘的部署的算力设备，包括 nvidia GPU 和 ascend NPU",
+        "en": "manager compute power device on edge nodes, including nvidia GPU and ascend NPU"
+      },
+      "display_name": {
+        "zh": "边缘计算设备管理",
+        "en": "Edge compute device manager"
+      },
+      "category": "ai-machine-learning",
+      "keywords": [
+        "ai-machine-learning"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "青云科技",
+          "email": "support@kubesphere.cloud"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "青云科技",
+          "email": "support@kubesphere.cloud",
+          "url": "https://www.qingcloud.com"
+        },
+        "en": {
+          "name": "QingCloud",
+          "email": "support@kubesphere.cloud",
+          "url": "https://www.qingcloud.com"
+        }
+      }
+    },
+    {
+      "id": "58",
+      "chineseName": "边缘 Deepseek 基础模型",
+      "englishName": "edge-deepseek-base",
+      "version": "0.1.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.io",
+      "description": {
+        "zh": "支持在边缘快速部署 deepseek-1.5b 模型",
+        "en": "Support to deploy deepseek-1.5b model on edge nodes"
+      },
+      "display_name": {
+        "zh": "边缘 Deepseek 基础模型",
+        "en": "edge deepseek base model"
+      },
+      "category": "ai-machine-learning",
+      "keywords": [
+        "ai-machine-learning"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "QingCloud",
+          "email": "support@kubesphere.cloud"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "QingCloud",
+          "email": "support@kubesphere.cloud",
+          "url": "https://www.qingcloud.com"
+        },
+        "en": {
+          "name": "QingCloud",
+          "email": "support@kubesphere.cloud",
+          "url": "https://www.qingcloud.com"
+        }
+      }
+    },
+    {
+      "id": "59",
+      "chineseName": "边缘算法模型部署模版",
+      "englishName": "edge-qos",
+      "version": "3.1.1",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.io",
+      "description": {
+        "zh": "支持制作边缘算法模型部署模版并对模型服务进行访问",
+        "en": "support to limit requests to model servers"
+      },
+      "display_name": {
+        "zh": "边缘算法模型部署模版",
+        "en": "edge-qos"
+      },
+      "category": "other",
+      "keywords": [
+        "other"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "青云科技",
+          "email": "support@kubesphere.cloud"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "青云科技",
+          "email": "support@kubesphere.cloud",
+          "url": "https://www.qingcloud.com"
+        },
+        "en": {
+          "name": "QingCloud",
+          "email": "support@kubesphere.cloud",
+          "url": "https://www.qingcloud.com"
+        }
+      }
+    },
+    {
+      "id": "60",
+      "chineseName": "快速集成",
+      "englishName": "frontend-forge",
+      "version": "1.0.0",
+      "kube_version": ">=1.23.0-0",
+      "ks_version": ">=4.2.1-0",
+      "home": "https://kubesphere.com.cn/",
+      "description": {
+        "zh": "快速集成支持将Kubernetes自定义资源（CRD）及外部系统页面统一接入平台，实现能力标准化接入、集中管理和一站式可视化运维，增强平台扩展能力。",
+        "en": "Quick Integration enables extension resources and external system pages to be integrated into the platform for unified access and management."
+      },
+      "display_name": {
+        "zh": "快速集成",
+        "en": "Quick Integration"
+      },
+      "category": "dev-tools",
+      "keywords": [
+        "Frontend"
+      ],
+      "installation_mode": "HostOnly",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "61",
+      "chineseName": "Gateway API 网关",
+      "englishName": "gateway-api",
+      "version": "1.0.0-alpha.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.io",
+      "description": {
+        "zh": "这是一个示例扩展组件，这是它的描述",
+        "en": "This is a sample extension, and this is its description"
+      },
+      "display_name": {
+        "zh": "Gateway API 网关",
+        "en": "Gateway API"
+      },
+      "category": "networking",
+      "keywords": [
+        "networking",
+        "gateway",
+        "gateway-api",
+        "traefik"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        }
+      }
+    },
+    {
+      "id": "62",
+      "chineseName": "4A用户同步",
+      "englishName": "identity-syncer-4a",
+      "version": "1.0.2-cmft",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.io",
+      "description": {
+        "zh": "4A用户同步是一个 Kubernetes 原生解决方案，用于管理和同步不同系统间的用户身份和组织结构。",
+        "en": "Identity Syncer 4A is a Kubernetes-native solution for managing and synchronizing user identities and organizational structures across different systems."
+      },
+      "display_name": {
+        "zh": "4A用户同步",
+        "en": "Identity Syncer 4A"
+      },
+      "category": "security",
+      "keywords": [
+        "security"
+      ],
+      "installation_mode": "HostOnly",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "63",
+      "chineseName": "KAITO",
+      "englishName": "kaito",
+      "version": "0.6.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.io",
+      "description": {
+        "zh": "KAITO 是一款能够在 Kubernetes 集群中自动化执行 AI/ML 模型推理或调优任务的运算符，主要针对 falcon、phi-3 等热门开源大语言模型。",
+        "en": "KAITO is an operator that automates the AI/ML model inference or tuning workload in a Kubernetes cluster. The target models are popular open-sourced large models such as falcon and phi-3."
+      },
+      "display_name": {
+        "zh": "KAITO",
+        "en": "KAITO"
+      },
+      "category": "ai-machine-learning",
+      "keywords": [
+        "ai-machine-learning"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "kubesphere"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "kubesphere"
+        },
+        "en": {
+          "name": "kubesphere"
+        }
+      }
+    },
+    {
+      "id": "64",
+      "chineseName": "karmada-dashboard",
+      "englishName": "karmada-dashboard",
+      "version": "1.0.0",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.0.0-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://karmada.io/docs/",
+      "description": {
+        "zh": "karmada-dashboard 为 karmada 提供了一下可视化面板，以帮助用户快速了解集群资源，同时提供资源编排、调度、升级等功能。",
+        "en": "karmada-dashboard provides a visual dashboard for karmada to help users quickly understand cluster resources, and provide functions such as resource orchestration, scheduling, and upgrade."
+      },
+      "display_name": {
+        "zh": "karmada-dashboard",
+        "en": "karmada-dashboard"
+      },
+      "category": "computing",
+      "keywords": [
+        "multi-cluster",
+        "federation"
+      ],
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    },
+    {
+      "id": "65",
+      "chineseName": "NVIDIA Network Operator",
+      "englishName": "nvidia-network-operator",
+      "version": "25.7.0",
+      "kube_version": ">=1.23.0-0",
+      "ks_version": ">=4.2.0-0",
+      "home": "http://www.mellanox.com",
+      "docs": "https://docs.nvidia.com/networking/software/cloud-orchestration/index.html",
+      "description": {
+        "zh": "NVIDIA Network Operator 简化了在 Kubernetes 集群中部署和管理 NVIDIA 网络设备的过程，通过自动化配置 RDMA 和 GPU 技术，为 AI 和 HPC 工作负载提供高性能网络支持。",
+        "en": "NVIDIA Network Operator simplifies the deployment and management of NVIDIA networking in Kubernetes. It automates the configuration of RDMA and GPU technologies, providing high-performance networking for AI and HPC workloads."
+      },
+      "display_name": {
+        "zh": "NVIDIA Network Operator",
+        "en": "NVIDIA Network Operator"
+      },
+      "category": "ai-machine-learning",
+      "keywords": [
+        "ai-machine-learning"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "NVIDIA",
+          "email": "github@mellanox.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "NVIDIA",
+          "email": "github@mellanox.com",
+          "url": "http://www.mellanox.com"
+        },
+        "en": {
+          "name": "NVIDIA",
+          "email": "github@mellanox.com",
+          "url": "http://www.mellanox.com"
+        }
+      }
+    },
+    {
+      "id": "66",
+      "chineseName": "WizTelemetry BPF Collector",
+      "englishName": "wiztelemetry-bpf-collector",
+      "version": "1.0.3",
+      "kube_version": ">=1.19.0-0",
+      "ks_version": ">=4.1.2-0",
+      "home": "https://kubesphere.com.cn/",
+      "docs": "https://docs.kubesphere.com.cn/",
+      "description": {
+        "zh": "WizTelemetry BPF Collector 是一个面向 Kubernetes 的 eBPF 数据采集与聚合组件。它整合多种 eBPF 代理（Agent）或运行时数据源，并提供统一的元数据关联、数据标准化和过滤功能。",
+        "en": "WizTelemetry BPF Collector is a Kubernetes-oriented eBPF data collection and aggregation component. It integrates multiple eBPF agents or runtime data sources, and offers unified metadata correlation, data normalization, and filtering capabilities."
+      },
+      "display_name": {
+        "zh": "WizTelemetry BPF Collector",
+        "en": "WizTelemetry BPF Collector"
+      },
+      "category": "observability",
+      "keywords": [
+        "Observability",
+        "eBPF",
+        "Network Monitoring"
+      ],
+      "installation_mode": "Multicluster",
+      "maintainers": [
+        {
+          "name": "KubeSphere",
+          "email": "kubesphere@yunify.com"
+        }
+      ],
+      "provider": {
+        "zh": {
+          "name": "北京青云科技股份有限公司",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.com.cn/"
+        },
+        "en": {
+          "name": "QingCloud Technologies",
+          "email": "kubesphere@yunify.com",
+          "url": "https://kubesphere.co/"
+        }
+      }
+    }
+  ]
+}

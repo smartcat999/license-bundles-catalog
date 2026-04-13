@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>套餐修订 · KubeSphere 商业许可</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;510;590&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .propose-page {
+        max-width: 52rem;
+        margin: 0 auto;
+        padding: 1.25rem 1rem 3rem;
+      }
+      .propose-page__back {
+        display: inline-block;
+        margin-bottom: 1rem;
+        font-size: 13px;
+        color: var(--text-secondary);
+        text-decoration: none;
+      }
+      .propose-page__back:hover {
+        color: var(--accent-bright);
+        text-decoration: underline;
+      }
+      .propose-page__lead {
+        color: var(--text-secondary);
+        font-size: 14px;
+        line-height: 1.55;
+        margin: 0 0 1.25rem;
+      }
+      .propose-picker {
+        display: grid;
+        gap: 0.75rem;
+        grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+        margin-bottom: 0.75rem;
+      }
+      .propose-picker__card {
+        text-align: left;
+        padding: 1rem 0.9rem;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border-subtle);
+        background: var(--panel);
+        color: var(--text-primary);
+        font: inherit;
+        cursor: pointer;
+        transition: border-color 0.12s ease, background 0.12s ease;
+      }
+      .propose-picker__card:hover {
+        border-color: var(--border-standard);
+        background: rgba(255, 255, 255, 0.04);
+      }
+      .propose-picker__card:focus-visible {
+        outline: 2px solid var(--accent-bright);
+        outline-offset: 2px;
+      }
+      .propose-picker__title-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.5rem 0.75rem;
+        margin-bottom: 0.35rem;
+      }
+      .propose-picker__title-row .propose-picker__title {
+        margin-bottom: 0;
+      }
+      .propose-picker__title {
+        display: block;
+        flex: 1 1 auto;
+        min-width: 0;
+        font-size: 15px;
+        font-weight: 590;
+        margin-bottom: 0.35rem;
+      }
+      .propose-picker__level.badge {
+        align-self: center;
+        line-height: 1.25;
+      }
+      .propose-picker__meta {
+        display: block;
+        font-size: 11px;
+        color: var(--text-muted);
+        line-height: 1.4;
+      }
+      .propose-picker__badge {
+        display: inline-block;
+        margin-top: 0.45rem;
+        font-size: 10px;
+        font-weight: 590;
+        padding: 0.15rem 0.4rem;
+        border-radius: var(--radius-sm);
+        background: rgba(99, 102, 241, 0.2);
+        color: var(--accent-bright);
+      }
+      .propose-picker__card--selected {
+        border-color: var(--accent-bright);
+        background: rgba(99, 102, 241, 0.12);
+        box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.35);
+      }
+      .propose-picker__card--selected:hover {
+        border-color: var(--accent-bright);
+        background: rgba(99, 102, 241, 0.16);
+      }
+      .propose-editor {
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        background: var(--panel);
+        padding: 1rem 1.1rem 1.15rem;
+        margin-bottom: 1rem;
+        scroll-margin-top: 0.75rem;
+      }
+      .propose-editor__head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem 1rem;
+        margin-bottom: 0.65rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+      .propose-reset-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem 0.75rem;
+        margin: 0 0 0.65rem;
+      }
+      .propose-editor__head h2 {
+        margin: 0;
+        flex: 1 1 auto;
+        font-size: 1.05rem;
+        font-weight: 590;
+        color: var(--text-primary);
+      }
+      .propose-btn-ghost {
+        font: inherit;
+        font-size: 13px;
+        font-weight: 510;
+        padding: 0.4rem 0.65rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-standard);
+        background: transparent;
+        color: var(--text-secondary);
+        cursor: pointer;
+      }
+      .propose-btn-ghost:hover {
+        color: var(--text-primary);
+        border-color: var(--border-standard);
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .propose-btn-ghost:disabled,
+      .propose-btn-ghost[disabled] {
+        opacity: 0.42;
+        cursor: not-allowed;
+        color: var(--text-muted);
+        border-color: var(--border-subtle);
+        background: transparent;
+      }
+      .propose-btn-ghost:disabled:hover,
+      .propose-btn-ghost[disabled]:hover {
+        color: var(--text-muted);
+        border-color: var(--border-subtle);
+        background: transparent;
+      }
+      .propose-field {
+        margin-bottom: 1rem;
+      }
+      .propose-field > label:first-child,
+      .propose-fieldset > legend {
+        display: block;
+        font-size: 12px;
+        font-weight: 590;
+        color: var(--text-secondary);
+        margin-bottom: 0.35rem;
+      }
+      .propose-field input[type="text"],
+      .propose-field input[type="number"] {
+        width: 100%;
+        box-sizing: border-box;
+        font: inherit;
+        font-size: 14px;
+        padding: 0.5rem 0.6rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-standard);
+        background: rgba(0, 0, 0, 0.25);
+        color: var(--text-primary);
+      }
+      .propose-field input[type="text"]:focus-visible,
+      .propose-field input[type="number"]:focus-visible {
+        outline: 2px solid var(--accent-bright);
+        outline-offset: 2px;
+        border-color: rgba(129, 140, 248, 0.65);
+      }
+      .propose-field input[type="number"] {
+        -moz-appearance: textfield;
+        appearance: textfield;
+        font-variant-numeric: tabular-nums;
+      }
+      .propose-field input[type="number"]::-webkit-outer-spin-button,
+      .propose-field input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .propose-field input[type="number"].propose-input-level {
+        width: auto;
+        max-width: 6.75rem;
+        min-width: 4.5rem;
+        text-align: center;
+      }
+      .propose-field--inline {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 0.65rem;
+        row-gap: 0.25rem;
+      }
+      .propose-field--inline > label:first-child {
+        margin-bottom: 0;
+      }
+      .propose-field--inline input[type="number"].propose-input-level {
+        flex: 0 0 auto;
+      }
+      .propose-field--inline > .propose-field__hint {
+        flex-basis: 100%;
+        width: 100%;
+        margin-top: 0.15rem;
+      }
+      .propose-field__hint {
+        font-size: 11px;
+        color: var(--text-muted);
+        margin-top: 0.3rem;
+        line-height: 1.45;
+      }
+      .propose-field__hint--req {
+        margin-top: -0.35rem;
+        margin-bottom: 0.65rem;
+        color: var(--text-secondary);
+      }
+      .propose-req {
+        color: #f87171;
+        font-weight: 700;
+      }
+      .propose-field__msg {
+        font-size: 11px;
+        margin-top: 0.25rem;
+        min-height: 1.2em;
+        line-height: 1.35;
+        color: var(--text-muted);
+      }
+      .propose-field__msg--err {
+        color: #f87171;
+      }
+      .propose-fieldset {
+        border: none;
+        padding: 0;
+        margin: 0 0 1rem;
+      }
+      .propose-filter {
+        width: 100%;
+        box-sizing: border-box;
+        font: inherit;
+        font-size: 13px;
+        padding: 0.45rem 0.55rem;
+        margin-bottom: 0.5rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-standard);
+        background: rgba(0, 0, 0, 0.25);
+        color: var(--text-primary);
+      }
+      .propose-check-toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem 0.65rem;
+        margin-bottom: 0.45rem;
+        align-items: center;
+      }
+      .propose-check-toolbar button {
+        font: inherit;
+        font-size: 11px;
+        padding: 0.2rem 0.45rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-subtle);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text-secondary);
+        cursor: pointer;
+      }
+      .propose-check-toolbar button:hover {
+        color: var(--text-primary);
+      }
+      .propose-check-scroll {
+        max-height: 14rem;
+        overflow: auto;
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-sm);
+        padding: 0.35rem 0.5rem;
+        background: rgba(0, 0, 0, 0.15);
+        scrollbar-width: thin;
+        scrollbar-color: rgba(129, 140, 248, 0.55) rgba(255, 255, 255, 0.06);
+      }
+      .propose-check-scroll::-webkit-scrollbar {
+        width: 9px;
+        height: 9px;
+      }
+      .propose-check-scroll::-webkit-scrollbar-track {
+        margin: 4px 0;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 100px;
+      }
+      .propose-check-scroll::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, rgba(129, 140, 248, 0.55), rgba(99, 102, 241, 0.45));
+        border-radius: 100px;
+        border: 2px solid transparent;
+        background-clip: padding-box;
+      }
+      .propose-check-scroll::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, rgba(165, 180, 252, 0.75), rgba(129, 140, 248, 0.65));
+        border: 2px solid transparent;
+        background-clip: padding-box;
+      }
+      .propose-check-scroll::-webkit-scrollbar-corner {
+        background: transparent;
+      }
+      .propose-check-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.45rem;
+        padding: 0.28rem 0.15rem;
+        border-radius: var(--radius-sm);
+      }
+      .propose-check-row:hover {
+        background: rgba(255, 255, 255, 0.04);
+      }
+      .propose-check-row input {
+        margin-top: 0.2rem;
+        flex-shrink: 0;
+      }
+      .propose-check-row__text {
+        flex: 1;
+        min-width: 0;
+        font-size: 13px;
+        line-height: 1.4;
+        color: var(--text-primary);
+        cursor: pointer;
+      }
+      .propose-check-row__sub {
+        display: block;
+        font-size: 11px;
+        color: var(--text-muted);
+        margin-top: 0.1rem;
+      }
+      .propose-check-row--hidden {
+        display: none !important;
+      }
+      /* 产品：多选清单（listbox 式区域，避免被误认为下拉单选） */
+      .propose-fieldset--multiselect {
+        padding: 0.65rem 0.75rem 0.75rem;
+        margin-left: -0.15rem;
+        margin-right: -0.15rem;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border-standard);
+        background: rgba(0, 0, 0, 0.12);
+      }
+      .propose-multiselect__summary {
+        margin: 0 0 0.5rem;
+        font-size: 12px;
+        font-weight: 590;
+        color: var(--text-secondary);
+      }
+      .propose-multiselect__list.propose-check-scroll {
+        min-height: 12.5rem;
+        max-height: 22rem;
+        border-width: 1px;
+        border-color: var(--border-standard);
+        background: rgba(0, 0, 0, 0.22);
+        scrollbar-gutter: stable;
+      }
+      @media (min-width: 36rem) {
+        .propose-multiselect__list.propose-check-scroll {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 0.65rem;
+          align-content: start;
+        }
+      }
+      .propose-actions {
+        margin-top: 1.25rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+        align-items: center;
+      }
+      .propose-actions button[type="button"]#propose-submit {
+        font: inherit;
+        font-size: 13px;
+        font-weight: 590;
+        padding: 0.55rem 1rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-standard);
+        background: var(--accent);
+        color: #0b0d12;
+        cursor: pointer;
+      }
+      .propose-actions button#propose-submit:hover {
+        filter: brightness(1.06);
+      }
+      .propose-actions button#propose-submit:focus-visible {
+        outline: 2px solid var(--accent-bright);
+        outline-offset: 2px;
+      }
+      .propose-status {
+        flex: 1 1 12rem;
+        font-size: 13px;
+        color: var(--text-secondary);
+        margin: 0;
+      }
+      .propose-status--err {
+        color: #f87171;
+      }
+      .propose-summary-wrap {
+        margin-bottom: 1rem;
+      }
+      .propose-summary-wrap label {
+        display: block;
+        font-size: 12px;
+        font-weight: 510;
+        color: var(--text-secondary);
+        margin-bottom: 0.25rem;
+      }
+      .propose-summary-wrap input {
+        width: 100%;
+        box-sizing: border-box;
+        font: inherit;
+        font-size: 13px;
+        padding: 0.45rem 0.55rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-standard);
+        background: rgba(0, 0, 0, 0.25);
+        color: var(--text-primary);
+      }
+      .propose-picker__card--add {
+        border-style: dashed;
+        border-color: var(--border-standard);
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .propose-picker__card--pending {
+        border-color: rgba(99, 102, 241, 0.45);
+      }
+      .propose-actions__secondary {
+        font: inherit;
+        font-size: 13px;
+        font-weight: 590;
+        padding: 0.5rem 0.9rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-standard);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text-primary);
+        cursor: pointer;
+      }
+      .propose-actions__secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header" id="site-header">
+      <h1 class="propose-page__title" style="padding: 1rem 1rem 0; margin: 0; font-size: 1.15rem">
+        套餐修订
+      </h1>
+    </header>
+    <main class="propose-page">
+      <a class="propose-page__back" href="index.html">← 返回商业许可页</a>
+      <p class="propose-page__lead">选择或新增套餐，编辑完成后点「复制并打开 GitHub」。</p>
+      <div id="propose-picker" class="propose-picker" role="navigation" aria-label="选择套餐"></div>
+      <div id="propose-editor" class="propose-editor" hidden>
+        <div class="propose-editor__head">
+          <h2 id="propose-editor-title">编辑套餐</h2>
+          <button type="button" id="propose-back-bundle" class="propose-btn-ghost">取消</button>
+        </div>
+        <div id="propose-editor-body"></div>
+      </div>
+      <div class="propose-summary-wrap">
+        <label for="proposal-summary">补充说明（选填）</label>
+        <input
+          id="proposal-summary"
+          type="text"
+          maxlength="160"
+          placeholder="一般无需填写；差异会由页面根据修改自动生成"
+          autocomplete="off"
+        />
+        <p class="propose-field__hint" style="margin-top: 0.35rem">
+          产品/扩展等差异在 Issue 正文「本次变更说明」与 JSON 内自动生成。GitHub 标题只会预填「套餐名」或你填的这句短备注，不会塞入明细。
+        </p>
+      </div>
+      <div class="propose-actions">
+        <button type="button" id="propose-submit">复制并打开 GitHub</button>
+        <p id="propose-status" class="propose-status" role="status"></p>
+      </div>
+    </main>
+    <script src="propose.js"></script>
+  </body>
+</html>
